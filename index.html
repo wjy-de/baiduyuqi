@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>百度舆情</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bdyq.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.fullPage.js"></script>
+		<script>
+			$(function(){
+				$('#dowebok').fullpage({
+					'navigation': true,
+					'navigationTooltips':['登录百度舆情','领先:数据搜集与处理','全面：舆情分析逻辑','专业:专业数据可视化'],
+					afterLoad:function(anchorLink,index){
+					$(".container").removeAttr("id");
+					$(".container").eq(index-1).attr("id","active");
+					$(".btn").click(function(){
+						$.fn.fullpage.moveSectionDown();
+					})
+				}
+				});
+				
+			});
+</script>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div id="dowebok">
+			<div class="section">
+				<div class="container">
+					<img src="images/cloud1.png" class="cloud1">
+					<img src="images/cloud2.png" class="cloud2">
+					<img src="images/cloud3.png" class="cloud3">
+					<img src="images/yuqi10-1.png" class="plan">
+					<img src="images/yuqi10.png" class="font1">
+					<img src="images/yuqi8.png" class="chuan">
+					<img src="images/yuqi5.png" class="hill1">
+					<img src="images/yuqi6.png" class="hill2">
+					<img src="images/yuqi7.png" class="hill3">
+					<div class="zhe"></div>
+					<img src="images/btn.png" class="btn">
+				</div>
+			</div>
+			<div class="section">
+				<div class="container">
+					<img src="images/yuqi2-2.png" class="font2L">
+					<img src="images/btn.png" class="btn">
+					<h2 class="font2R1">数据收集与处理</h2>
+					<p class="font2R2">15年专业数据收集与语义分析技术积累</br>卓越极致，不断攀登</p>
+					<img src="images/yuqi2-1.png" class="imgR2">
+					<div class="squar1"></div>
+					<div class="squar2"></div>
+					<div class="squar3"></div>
+					<div class="squar4"></div>
+					<div class="squar5"></div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="container">
+					<img src="images/yuqi3-1.png" class="font2L">
+					<img src="images/btn.png" class="btn">
+					<img src="images/yuqi3-2.png"class="imgR3" >
+					<img src="images/yuqi3-3.png" class="bottom3">
+					<div class="squar1"></div>
+					<div class="squar2"></div>
+					<div class="squar3"></div>
+					<div class="squar4"></div>
+					<div class="squar5"></div>
+					<h2 class="font2R1">舆情分析逻辑与架构</h2>
+					<p class="font2R2">声量诊断、传播分析、情感提炼、受众画像</br>有方法论，更有智慧</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="container">
+					<img src="images/yuqi4-1.png" class="font2L">
+					<img src="images/btn.png" class="btn">
+					<img src="images/yuqi4-2.png" class="imgL4">
+					<img src="images/yuqi4-3.png" class="imgR4">
+					<h2 class="font2R1">专业数据可视化</h2>
+					<p class="font2R2">非凡的数据洞悉和可视化能力/br>精研数据，惊艳所见</p>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
